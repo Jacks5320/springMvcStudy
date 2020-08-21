@@ -11,6 +11,9 @@
     <br/>
     <br/>
     <a href="paramBind.jsp">请求参数绑定演示</a>
+    <br/>
+    <br/>
+    <a href="stringToDate.jsp">自定义类型转换器演示</a>
 </div>
 </body>
 </html>
