@@ -10,7 +10,8 @@ import java.util.Date;
  * 自定义类型转换器
  * 步骤：
  *      1 定义类型转换器类和方法，类要实现 Converter<S,T> 接口，S 表示传入类型，T 表示要转换的类型
- *      2 在 springmvc.xml 中
+ *      2 在 springmvc.xml 中配置自定义类型转换器
+ *      3 在 springmvc.xml 配置自定义转换器生效
  */
 @Controller
 @RequestMapping("/demo")

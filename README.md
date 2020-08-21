@@ -10,6 +10,8 @@ demo2 ==> request 参数绑定
 
 demo3 ==> 自定义类型转换器
 
+demo4 ==> 原生 Servlet API 接口使用
+
 ## 博客地址
 
 [SpringMVC 简介及入门程序](https://blog.csdn.net/qq_44713454/article/details/108135004)
