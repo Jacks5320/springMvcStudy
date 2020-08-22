@@ -33,6 +33,9 @@
     <br/>
     <br/>
     <a href="servletApi.jsp">原生 Servlet Api 演示</a>
+    <br/>
+    <br/>
+    <a href="annotation.jsp">常用注解演示</a>
 </div>
 </body>
 </html>
