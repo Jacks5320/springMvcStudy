@@ -2,35 +2,30 @@
 <html>
 <head>
     <title>数据响应</title>
-    <style>
-        .out {
-            margin: 10px;
-            border: 1px black solid;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/my.css">
 </head>
 <body>
 <div class="out">
+    <h3>demo6：数据响应与结果视图</h3>
     <div class="out">
         <p>控制器方法返回 String</p>
-        <a href="demo6/testString">发送请求</a>
+        <a class="btn" href="demo6/testString">发送请求</a>
     </div>
     <div class="out">
         <p>控制器方法返回 void</p>
-        <a href="demo6/testVoid">发送请求</a>
+        <a class="btn" href="demo6/testVoid">发送请求</a>
     </div>
     <div class="out">
         <p>控制器方法返回 ModelAndView</p>
-        <a href="demo6/testModelAndView">发送请求</a>
+        <a class="btn" href="demo6/testModelAndView">发送请求</a>
     </div>
     <div class="out">
         <p>使用关键字进行转发或重定向</p>
-        <a href="demo6/testKeyWord">发送请求</a>
+        <a class="btn" href="demo6/testKeyWord">发送请求</a>
     </div>
     <div class="out">
         <p>响应 json 数据</p>
-        <button id="btn">发送 ajax 请求</button>
+        <button class="btn" id="btn">发送 ajax 请求</button>
     </div>
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -29,6 +29,10 @@
             </set>
         </property>
     </bean>
+
+    <!-- 配置过滤静态资源 -->
+    <mvc:resources mapping="/css/**" location="/css/"/>
+
     <!--配置自定义类型转换器生效-->
     <mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>
     <!--mvc 注解支持-->

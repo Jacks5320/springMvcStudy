@@ -2,24 +2,12 @@
 <html>
 <head>
     <title>原生 Servlet API</title>
-    <style>
-        a.button {
-            display: inline-block;
-            padding: 15px 25px;
-            font-size: 24px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/my.css">
 </head>
 <body>
-<a href="servlet/api" class="button">发送请求</a>
+<div class="out">
+    <h3>demo4：原生 servlet API</h3>
+    <a class="btn" href="servlet/api">发送请求</a>
+</div>
 </body>
 </html>
