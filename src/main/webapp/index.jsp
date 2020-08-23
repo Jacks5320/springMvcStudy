@@ -36,6 +36,9 @@
     <br/>
     <br/>
     <a href="annotation.jsp">常用注解演示</a>
+    <br/>
+    <br/>
+    <a href="response.jsp">数据响应与结果视图演示</a>
 </div>
 </body>
 </html>
