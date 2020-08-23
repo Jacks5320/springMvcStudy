@@ -17,36 +17,41 @@ import org.springframework.web.bind.support.SessionStatus;
 public class Demo5Controller2 {
     //  存储 session
     @PostMapping("/testSessionSave")
-    public void testSessionSave(User user,Model model){
+    public String testSessionSave(User user,Model model){
         System.out.println("<== testSessionSave 方法执行了 ==>");
         model.addAttribute("user",user);
         System.out.println(user);
+        return "success";
     }
     //  获取 session
     @GetMapping("/testSessionGet")
-    public void testSessionGet(Model model) {
+    public String testSessionGet(Model model) {
         System.out.println("<== testSessionGet 方法执行了 ==>");
         System.out.println("session中的user：" + model.getAttribute("user"));
+        return "success";
     }
     //  删除 session
     @GetMapping("/testSessionDelete")
-    public void testSessionDelete(SessionStatus status){
+    public String testSessionDelete(SessionStatus status){
         System.out.println("<== testSessionDelete 方法执行了 ==>");
         status.setComplete();
+        return "success";
     }
 
     /*
         演示 String 类型
      */
     @GetMapping("/testSessionString")
-    public void testSessionString(Model model){
+    public String testSessionString(Model model){
         System.out.println("<== testSessionString 方法执行了 ==>");
         model.addAttribute("msg","嗨呀，就这？");
+        return "success";
     }
 
     @GetMapping("/testSessionStringGet")
-    public void testSessionStringGet(Model model){
+    public String testSessionStringGet(Model model){
         System.out.println("<== testSessionStringGet 方法执行了 ==>");
         System.out.println("msg=" + model.getAttribute("msg"));
+        return "success";
     }
 }

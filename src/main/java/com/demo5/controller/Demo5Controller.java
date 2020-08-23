@@ -4,6 +4,7 @@ import com.demo5.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 /**
@@ -18,13 +19,15 @@ public class Demo5Controller {
             作用：将Servlet请求参数（即查询参数或表单数据）绑定到控制器中的方法参数。
      */
     @GetMapping("/testRequestParam")
-    public void testRequestParam(@RequestParam(name = "username", defaultValue = "张三") String name,
+    public String testRequestParam(@RequestParam(name = "username", defaultValue = "张三") String name,
                                  @RequestParam Integer age,
-                                 @RequestParam Double money) {
+                                 @RequestParam Double money,
+                                 HttpServletResponse response) {
         System.out.println("<== testRequestParam 方法执行了 ==>");
         System.out.println("姓名：" + name);
         System.out.println("年龄：" + age);
         System.out.println("金额：" + money);
+        return "success";
     }
 
     /*
@@ -32,9 +35,10 @@ public class Demo5Controller {
             作用：将请求头信息绑定到控制器中的方法参数。
      */
     @GetMapping("/testRequestHeader")
-    public void testRequestHeader(@RequestHeader(name = "User-Agent") String UserAgent) {
+    public String testRequestHeader(@RequestHeader(name = "User-Agent") String UserAgent) {
         System.out.println("<== testRequestHeader 方法执行了 ==>");
         System.out.println("User-Agent=" + UserAgent);
+        return "success";
     }
 
     /*
@@ -42,9 +46,10 @@ public class Demo5Controller {
             作用：将HTTP cookie的值绑定到控制器中的方法参数。
      */
     @GetMapping("/testCookieValue")
-    public void testCookieValue(@CookieValue("JSESSIONID") String JSESSIONID) {
+    public String testCookieValue(@CookieValue("JSESSIONID") String JSESSIONID) {
         System.out.println("<== testCookieValue 方法执行了 ==>");
         System.out.println("JSESSIONID=" + JSESSIONID);
+        return "success";
     }
 
     /*
@@ -74,9 +79,10 @@ public class Demo5Controller {
     }
 
     @PostMapping("/testModelAttribute")
-    public void testModelAttribute(@ModelAttribute("aaa") User aaa) {
+    public String testModelAttribute(@ModelAttribute("aaa") User aaa) {
         System.out.println("<== testModelAttribute 方法执行了 ==>");
         System.out.println("更新后的值：" + aaa);
+        return "success";
     }
 
 }

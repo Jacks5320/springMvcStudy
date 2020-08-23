@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 @RequestMapping("/demo5")
 public class Demo5Controller3 {
     @GetMapping("/testSessionAttribute")
-    public void testSessionAttribute(@SessionAttribute("msg") String msg){
+    public String testSessionAttribute(@SessionAttribute("msg") String msg){
         System.out.println("隔壁的 session 值=" + msg);
+        return "success";
     }
 }

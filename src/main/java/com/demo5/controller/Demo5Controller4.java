@@ -19,14 +19,16 @@ public class Demo5Controller4 {
 
     //  预先保存请求参数
     @ModelAttribute
-    public void testRequestAttributeSave(HttpServletRequest request){
+    public String testRequestAttributeSave(HttpServletRequest request){
         System.out.println("<== testRequestAttributeSave 方法执行了 ==>");
         request.setAttribute("msg","康康怎么回事儿。");
+        return "success";
     }
     //  获取预先保存的请求参数
     @GetMapping("/testRequestAttribute")
-    public void testRequestAttribute(@RequestAttribute("msg") String msg){
+    public String testRequestAttribute(@RequestAttribute("msg") String msg){
         System.out.println("\n<== testRequestAttributeSave 方法执行了 ==>");
-        System.out.println("预先存在的属性=" + msg);
+        System.out.println("预先存在的属性：" + msg);
+        return "success";
     }
 }
