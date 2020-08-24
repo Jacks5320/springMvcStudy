@@ -45,6 +45,10 @@
     <br/>
     <br/>
     <a href="demo8/testMyException">异常处理器演示</a>
+    <br/>
+    <br/>
+    <a href="interceptor.jsp">拦截器演示</a>
+
 </div>
 </body>
 </html>

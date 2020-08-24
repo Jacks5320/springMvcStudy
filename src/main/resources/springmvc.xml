@@ -32,6 +32,11 @@
         </property>
     </bean>
 
+    <!--配置自定义类型转换器生效-->
+    <mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>
+    <!--mvc 注解支持-->
+    <!--<mvc:annotation-driven/>-->
+
     <!-- 配置过滤静态资源 -->
     <mvc:resources mapping="/css/**" location="/css/"/>
 
@@ -49,8 +54,23 @@
     <!-- 注入异常处理器 -->
     <bean id="myExceptionResolver" class="com.demo8.exception.MyExceptionResolver"/>
 
-    <!--配置自定义类型转换器生效-->
-    <mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>
-    <!--mvc 注解支持-->
-    <!--<mvc:annotation-driven/>-->
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <!--拦截器1-->
+        <mvc:interceptor>
+            <!--
+                <mvc:mapping> 和 <mvc:exclude-mapping> 是一对标签
+                前者表示要拦截的路径，后者表示不拦截的路径
+             -->
+            <mvc:mapping path="/demo9/**"/>
+            <mvc:exclude-mapping path="/demo9/testInterceptor2"/>
+            <bean id="myInterceptor" class="com.demo9.interceptor.MyInterceptor"/>
+        </mvc:interceptor>
+        <!--拦截器2-->
+        <mvc:interceptor>
+            <mvc:mapping path="/demo9/**"/>
+            <mvc:exclude-mapping path="/demo9/testInterceptor2"/>
+            <bean id="myInterceptor2" class="com.demo9.interceptor.MyInterceptor2"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
