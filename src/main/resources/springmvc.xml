@@ -10,9 +10,10 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-    <!--包映射-->
+    <!--包扫描配置，扫描注解-->
     <context:component-scan base-package="com"/>
-    <!--视图解析器-->
+
+    <!--注入视图解析器-->
     <bean id="internalResourceViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--前缀-->
@@ -20,7 +21,8 @@
         <!--后缀-->
         <property name="suffix" value=".jsp"/>
     </bean>
-    <!--自定义类型转换器-->
+
+    <!--注入自定义类型转换器-->
     <bean id="conversionServiceFactoryBean"
           class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
@@ -34,7 +36,7 @@
     <mvc:resources mapping="/css/**" location="/css/"/>
 
     <!--
-        配置文件解析器 MultipartResolver
+        注入文件解析器 MultipartResolver
         id 值必须为 multipartResolver
         DispatcherServlet 中固定了这类 bean 的 id 值。具体有哪些可以去源码中查看
     -->
@@ -43,6 +45,9 @@
         <!--最大上传：10M = 10*1024 kb = 10*1024*1024 b = 10485760 b-->
         <property name="maxUploadSize" value="10485760"/>
     </bean>
+
+    <!-- 注入异常处理器 -->
+    <bean id="myExceptionResolver" class="com.demo8.exception.MyExceptionResolver"/>
 
     <!--配置自定义类型转换器生效-->
     <mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>

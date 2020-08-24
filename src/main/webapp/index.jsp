@@ -42,6 +42,9 @@
     <br/>
     <br/>
     <a href="fileUpload.jsp">文件上传演示</a>
+    <br/>
+    <br/>
+    <a href="demo8/testMyException">异常处理器演示</a>
 </div>
 </body>
 </html>

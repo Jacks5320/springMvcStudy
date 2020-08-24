@@ -1,7 +1,7 @@
 package com.demo8.exception;
 
 /**
- * 自定义异常类
+ * 自定义异常类，用于处理运行过程中产生的异常
  */
 public class MyException extends Exception {
 
