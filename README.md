@@ -16,6 +16,8 @@ demo5 ==> 常用注解
 
 demo6 ==> 数据响应与结果视图
 
+demo7 ==> 文件上传
+
 ## 博客地址
 
 [SpringMVC 简介及入门程序](https://blog.csdn.net/qq_44713454/article/details/108135004)
@@ -31,3 +33,7 @@ demo6 ==> 数据响应与结果视图
 [SpringMVC 中的注解](https://blog.csdn.net/qq_44713454/article/details/108166890)
 
 [SpringMVC 数据响应与结果视图](https://blog.csdn.net/qq_44713454/article/details/108188261)
+
+[SpringMVC 过滤静态资源](https://blog.csdn.net/qq_44713454/article/details/108190159)
+
+[SpringMVC 文件上传](https://blog.csdn.net/qq_44713454/article/details/108197688)

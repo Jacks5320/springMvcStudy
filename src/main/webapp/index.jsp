@@ -39,6 +39,9 @@
     <br/>
     <br/>
     <a href="response.jsp">数据响应与结果视图演示</a>
+    <br/>
+    <br/>
+    <a href="fileUpload.jsp">文件上传演示</a>
 </div>
 </body>
 </html>
